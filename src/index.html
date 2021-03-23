@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Image Example</title>
+</head>
+<body>
+<h1>Responsive Image Example</h1>
+<div>
+    <picture>
+        <source media="(min-width: 1280px)" srcset="<%= require('./images/1280px-NirvanaLogo.png?{sizes:[1280], format: \'webp\'}') %>" type="image/webp">
+        <source media="(min-width: 600px)" srcset="<%= require('./images/1280px-NirvanaLogo.png?{sizes:[600], format: \'webp\'}') %>" type="image/webp">
+        <source srcset="<%= require('./images/1280px-NirvanaLogo.png?{sizes:[300], format: \'webp\'}') %>" type="image/webp">
+        <img class="lazy-image" width="auto" height="auto"
+             src="<%= require('./images/1280px-NirvanaLogo.png?{sizes:[600], format: \'jpg\'}')%>"
+             srcset="<%= require('./images/1280px-NirvanaLogo.png?{sizes:[600], format: \'jpg\', placeholder: true}').placeholder %>"
+             alt="">
+    </picture>
+</div>
+</body>
+</html>
