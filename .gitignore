@@ -1,0 +1,12 @@
+# OS
+Thumbs.db
+.DS_Store
+
+# editors
+.idea
+
+# node
+node_modules
+
+# build
+dist
